@@ -8,15 +8,12 @@ Obviously `stow` otherwise I did nothing.
 
 - alacritty
 - tmux
-
 - zsh
 - antibody
-
 - git
 - ranger
 - bat
 - neovim
-
 - rofi
 - polybar
 - i3
