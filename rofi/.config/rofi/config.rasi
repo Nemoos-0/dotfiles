@@ -1,0 +1,7 @@
+configuration {
+	font: "Source Code Pro 10";
+	display-drun: "Applications";
+	display-window: "Windows";
+}
+
+@theme "onedark"
