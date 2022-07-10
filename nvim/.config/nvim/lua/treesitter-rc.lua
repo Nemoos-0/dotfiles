@@ -1,6 +1,6 @@
 require('nvim-treesitter.configs').setup {
 	ensure_installed = { 'latex', 'python', 'lua' },
-	highlights = {
+	highlight = {
 		enable = true,
 	},
 	incremental_selection = {

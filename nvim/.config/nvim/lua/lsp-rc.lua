@@ -1,7 +1,8 @@
 local lspconfig = require('lspconfig')
+local lsp_installer = require('nvim-lsp-installer')
 
 -- LSP installer
-require("nvim-lsp-installer").setup({
+lsp_installer.setup({
 	ui = {
 		icons = {
 			server_installed = "✓",
@@ -53,9 +54,9 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = lsp_installer.get_installed_servers()
 for _, lsp in ipairs(servers) do
-	lspconfig[lsp].setup {
+	lspconfig[lsp.name].setup {
 		on_attach = on_attach,
 		capabilities = capabilities,
 	}

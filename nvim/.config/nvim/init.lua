@@ -72,7 +72,7 @@ vim.g.tex_flavor = "latex"
 -- Set statusbar
 require('lualine').setup {
   options = {
-    icons_enabled = false,
+    icons_enabled = true,
     theme = 'onedark',
     component_separators = '|',
     section_separators = '',
@@ -102,6 +102,6 @@ require('nvim-autopairs').setup {}
 require('telescope-rc')
 require('treesitter-rc')
 require('lsp-rc')
-require('snip-rc')
+require('snippet-rc')
 require('cmp-rc')
 

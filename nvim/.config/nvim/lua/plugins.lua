@@ -33,6 +33,7 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
+	use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
 	-- Git
 	use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
