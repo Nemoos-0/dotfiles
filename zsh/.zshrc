@@ -27,3 +27,5 @@ alias ll="ls -la --color"
 alias l.="ls -d .* --color"
 
 alias v="nvim"
+
+alias jl="jupyter-lab"
