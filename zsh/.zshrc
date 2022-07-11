@@ -17,6 +17,9 @@ antibody bundle < ~/.zsh_plugins.txt
 
 eval "$(starship init zsh)"
 
+export VISUAL="nvim"
+export EDITOR="nvim"
+
 alias tn="tmux new"
 alias ta="tmux a"
 alias tl="tmux ls"
@@ -27,5 +30,7 @@ alias ll="ls -la --color"
 alias l.="ls -d .* --color"
 
 alias v="nvim"
+alias lg="lazygit"
 
+alias s=". ranger"
 alias jl="jupyter-lab"
