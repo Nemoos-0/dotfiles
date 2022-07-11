@@ -39,6 +39,7 @@ return require('packer').startup(function(use)
 	use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
 
 	-- Surround characters
+	use 'numToStr/Comment.nvim'
 	use 'windwp/nvim-autopairs'
 	use 'tpope/vim-surround'
 

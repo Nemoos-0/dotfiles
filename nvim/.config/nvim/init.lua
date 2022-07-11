@@ -97,6 +97,7 @@ require('gitsigns').setup {
 }
 
 require('nvim-autopairs').setup {}
+require('Comment').setup {}
 
 -- Plugins settings
 require('telescope-rc')

@@ -36,7 +36,7 @@ ls.add_snippets('all', {
 	s('me', fmt([[Matteo Romano]], {}, {})),
 })
 
---- LaTeX
+-- LaTeX
 
 local greek_sym = ';' -- character to put before latin letter to get greek mapping
 
@@ -47,17 +47,20 @@ local ts_utils = require('nvim-treesitter.ts_utils')
 local function in_math()
 	local node = ts_utils.get_node_at_cursor()
 
-	if node then
-		print(node:type())
-		if (node:type() == "text") then
-			node = node:parent()
+	while node do
+		if (node:type() == "text_mode" or node:type() == "generic_environment") then
+			return false
 		end
 
 		if (
-			node:type() == "math_environment" or node:type() == "inline_formula" or
-				node:type() == "displayed_equation") then
+			node:type() == "math_environment" or
+			node:type() == "inline_formula" or
+			node:type() == "displayed_equation"
+		) then
 			return true
 		end
+
+		node = node:parent()
 	end
 
 	return false
@@ -116,7 +119,6 @@ for latin, greek in pairs(greek_latin) do
 			t('\\' .. greek),
 		}, {
 			condition = in_math,
-			show_condition = false,
 		})
 	)
 end
