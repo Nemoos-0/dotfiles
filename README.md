@@ -1,20 +1,12 @@
 # Dotfiles
 
-Linux dotfiles placed in order to use `stow` to automatically generate all the symlinks
+Linux dotfiles placed in order to use `stow` to automatically generate all the symlinks.
 
-## Packages
+In order to create all the symlinks use the following command:
 
-Obviously `stow` otherwise I did nothing.
+```sh
+stow --no-folding <program-name>
+```
 
-- alacritty
-- tmux
-- zsh
-- antibody
-- git
-- ranger
-- bat
-- neovim
-- rofi
-- polybar
-- i3
+If you already used a previous version of the config files add the flag `--restow`.
 
